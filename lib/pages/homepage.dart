@@ -38,7 +38,25 @@ class MyHomePage extends StatelessWidget {
               ),
               ElevatedButton(
                   onPressed: () {
-                    authController.loginUser();
+                    var resfun = authController.loginUser();
+                    if (resfun == true) {
+                      Fluttertoast.showToast(
+                          msg: "Succ",
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.CENTER,
+                          timeInSecForIosWeb: 1,
+                          backgroundColor: Colors.white,
+                          textColor: Colors.black,
+                          fontSize: 16.0);
+                    } else
+                      Fluttertoast.showToast(
+                          msg: "non",
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.CENTER,
+                          timeInSecForIosWeb: 1,
+                          backgroundColor: Colors.white,
+                          textColor: Colors.black,
+                          fontSize: 16.0);
                   },
                   child: Text(
                     'Login',
