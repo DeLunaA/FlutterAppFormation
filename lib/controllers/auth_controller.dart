@@ -24,7 +24,7 @@ class AuthController {
       print(body);
       print("Response Status :  ${response.statusCode}");
       return Fluttertoast.showToast(
-          msg: "succ",
+          msg: "Loged in",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.CENTER,
           timeInSecForIosWeb: 1,
