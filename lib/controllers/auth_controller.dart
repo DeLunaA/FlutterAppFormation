@@ -34,6 +34,7 @@ class AuthController {
     } else {
       print("Response Status :  ${response.statusCode}");
       print("login error ! ");
+      print(usernameController);
       return Fluttertoast.showToast(
           msg: "err",
           toastLength: Toast.LENGTH_SHORT,
@@ -43,5 +44,6 @@ class AuthController {
           textColor: Colors.black,
           fontSize: 16.0);
     }
+  } 
   }
-}
+
